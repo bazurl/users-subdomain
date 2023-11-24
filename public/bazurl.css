@@ -1,0 +1,46 @@
+body {
+  font-family: 'Arial';
+  font-size: 5vw;
+  background: #903;
+  text-align: center;
+}
+
+h1 {
+  color: #FC0;
+  text-shadow: -2px 0 black, 0 2px black, 8px 0 black, 0 -2px black;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  font-size: 12px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000;
+}
+
+.circle {
+  font-family: 'Bangers';
+  width: 30vw;
+  height: 30vw;
+  margin: 5vw auto 5vw auto;
+  background: white;
+  border-radius: 50%;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%) rotate(-5deg);
+}
+
+.overflow {
+  position: absolute;
+  white-space: nowrap;
+}
