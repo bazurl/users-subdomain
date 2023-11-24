@@ -4,10 +4,17 @@ Based on the guide at https://fly.io/docs/getting-started/static/
 
 ## Custom domain
 
-For a taste of how straightforward the process can be, here’s a speed run for adding a host/domain to an application. Let’s say we have example.com and a Fly app called custom-quartz.
+https://fly.io/blog/how-to-custom-domains-with-fly/
+https://fly.io/docs/app-guides/custom-domains-with-fly/
 
-* Run `flyctl ips list -a custom-quartz` to get the IPv4 and IPv6 addresses.
-* Head over to your DNS provider and add A and AAAA records for example.com with the IPv4 and IPv6 values.
-* Run `flyctl certs create -a custom-quartz example.com`
-* Run `flyctl certs show -a custom-quartz example.com` to watch your certificates being issued.
-* Connect to https://example.com and use your application with auto-renewing Let’s Encrypt TLS certificates, edge TLS, HTTP/2 support and more. 
+* Run `flyctl ips list` 
+  ```
+  VERSION IP                      TYPE            REGION  CREATED AT           
+  v6      2a09:8280:1::f:a8d2     public          global  2023-11-18T00:01:11Z
+  v4      66.241.124.244          public (shared) 
+  ``` 
+* Update DNS
+  Create `A` record with v4 value
+  Create `AAAA` record with v6 value
+* Run `flyctl certs create user.bazurl.com` to create certificate
+* Run `flyctl certs show user.bazurl.com` to verify if certificate is ready
