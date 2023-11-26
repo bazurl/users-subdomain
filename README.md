@@ -18,3 +18,6 @@ https://fly.io/docs/app-guides/custom-domains-with-fly/
   Create `AAAA` record with v6 value
 * Run `flyctl certs create user.bazurl.com` to create certificate
 * Run `flyctl certs show user.bazurl.com` to verify if certificate is ready
+
+## More
+https://fly.io/docs/app-guides/global-nginx-proxy/
